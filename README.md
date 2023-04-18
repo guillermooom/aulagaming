@@ -12,3 +12,4 @@ no se como quieren eso asi que está pendiente y queda en el campo de dudas
 Tareas Realizadas
 
 - Guille -> Login + home(plantilla)
+- Adri -> SQL + register
