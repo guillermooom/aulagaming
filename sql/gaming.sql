@@ -5,37 +5,37 @@ USE gaming;
 
 DROP TABLE IF EXISTS usuarios;
 
-create table usuarios (usuario varchar(9) not null, nombre varchar(50) not null, apellido varchar(50) not null,
- curso varchar(50), fecha_alta date not null, ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+create table usuarios (email varchar(50) not null, nombre varchar(20) not null, apellido varchar(20) not null,
+ contraseña varchar(20)	, fecha_alta date not null, vetado date, pc_reservados int not null) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-alter table usuarios add constraint pk_usuarios primary key (dni);
+alter table usuarios add constraint pk_usuarios primary key (email);
 
-insert into usarios (usuarios , nombre , apellido , curso , fecha_alta ) values
-('Paco777','Paco','Gonzalez','2DAW','2023-05-08'),
-('Manolito','Manolo','Lama','1DAM','2023-05-09'),
-('Mariaaa','María','Gonzalez','2DAW','2023-05-08')
+insert into usuarios (email , nombre , apellido , contraseña , fecha_alta , vetado, pc_reservados ) values
+('paco@educamadrid.com','Paco','Gonzalez','admin','2023-05-08',NULL,'0'),
+('manolo@educamadrid.com','Manolo','Lama','admin','2023-05-09',NULL,'0'),
+('maria@educamadrid.com','María','Gonzalez','admin','2023-05-08',NULL,'0');
 
 
 DROP TABLE IF EXISTS pc;
 
-create table pc (id varchar(7), disponible varchar(1)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+create table pc (id int, estado varchar(10)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-alter table pc add constraint pk_epatines primary key (matricula);
+alter table pc add constraint pk_pc primary key (id);
 
-insert into pc (id, disponible ) values
-('1', 'S'),
-('2', 'S');
+insert into pc (id, estado) values
+('1', 'Correcto'),
+('2', 'Correcto');
 
 
 DROP TABLE IF EXISTS reservar;
-create table reservar (usuario varchar(9) not null, id varchar(7) not null, fecha_reserva timestamp)
+create table reservar (email varchar(50) not null, id int not null, fecha_reserva timestamp not null, turno varchar(10) not null, incidencia date)
 ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-alter table reservar add constraint pk_reservar primary key (usuario,id, fecha_reserva);
-alter table reservar add constraint fk_reservar_usuario foreign key (usuario) references usuarios(usuario);
+alter table reservar add constraint pk_reservar primary key (email,id, fecha_reserva);
+alter table reservar add constraint fk_reservar_email foreign key (email) references usuarios(email);
 alter table reservar add constraint fk_reservar_id foreign key (id) references pc(id);
 
-insert into reservar  (usuario , id , fecha_reserva ) values
-('Paco777','2','2023-05-08 13:00:00');
+insert into reservar  (email , id , fecha_reserva , turno , incidencia ) values
+('paco@educamadrid.com','2','2023-05-08 13:00:00','tarde',NULL);
 
 commit;	
