@@ -24,11 +24,18 @@ alter table pc add constraint pk_pc primary key (id);
 
 insert into pc (id, estado) values
 ('1', 'Correcto'),
-('2', 'Correcto');
+('2', 'Correcto'),
+('3', 'Correcto'),
+('4', 'Correcto'),
+('5', 'Correcto'),
+('6', 'Correcto'),
+('7', 'Correcto'),
+('8', 'Correcto'),
+('9', 'Correcto');
 
 
 DROP TABLE IF EXISTS reservar;
-create table reservar (email varchar(50) not null, id int not null, fecha_reserva timestamp not null, turno varchar(10) not null, incidencia date)
+create table reservar (email varchar(50) not null, id int not null, fecha_reserva date not null, turno varchar(10) not null, incidencia date)
 ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 alter table reservar add constraint pk_reservar primary key (email,id, fecha_reserva);
@@ -36,6 +43,9 @@ alter table reservar add constraint fk_reservar_email foreign key (email) refere
 alter table reservar add constraint fk_reservar_id foreign key (id) references pc(id);
 
 insert into reservar  (email , id , fecha_reserva , turno , incidencia ) values
-('paco@educamadrid.com','2','2023-05-08 13:00:00','tarde',NULL);
+('paco@educamadrid.com','2','2023-05-08','tarde',NULL),
+('maria@educamadrid.com','4','2023-05-07','tarde',NULL),
+('paco@educamadrid.com','5','2023-05-08','mañana',NULL),
+('manolo@educamadrid.com','1','2023-05-07','mañana',NULL);
 
 commit;	
