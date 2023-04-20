@@ -2,34 +2,25 @@
 
 //eregistrarse:
 
- function registerl($email,$nombre,$apellido,$contraseña) {
+ function registerl($email,$nombre,$apellido,$contra) {
 													
 		/*Inserción en tabla Prepared Statement- mysql PDO*/
 		try {
 			$conn = connecttoDB();
-	
-			// prepare sql and bind parameters
-			$stmt = $conn->prepare("INSERT INTO usuarios(email,nombre,apellido,contraseña,fecha_alta,vetado,pc_resevados) VALUES (:email,:nombre,:apellido,:contraseña,:fecha_alta,:vetado,:pc_reservados)");
-			$stmt->bindParam(':email', $ema);
-			$stmt->bindParam(':nombre', $nomb);
-			$stmt->bindParam(':apellido', $ape);
-			$stmt->bindParam(':contraseña', $con);
-			$stmt->bindParam(':fecha_alta', $fec);
-            $stmt->bindParam(':vetado', $vet);
-            $stmt->bindParam(':pc_reservados', $pres);
 
 			//Para saber la fecha de alta.
+			$f_alta = date('Y-m-d');
 
-			$f_alta = date('Y-m-j h:i:s');
+			// prepare sql and bind parameters
+			$stmt = $conn->prepare("INSERT INTO usuarios(email,nombre,apellido,contra,fecha_alta,vetado,pc_reservados)
+			VALUES (:email,:nombre,:apellido,:contra,:fecha_alta,NULL,0)");
+			$stmt->bindParam(':email', $email);
+			$stmt->bindParam(':nombre', $nombre);
+			$stmt->bindParam(':apellido', $apellido);
+			$stmt->bindParam(':contra', $contra);
+			$stmt->bindParam(':fecha_alta', $f_alta);
 
 			// insert a row
-			$ema = $email;
-			$nomb = $nombre;
-			$ape = $apellido;
-			$con = $contraseña;
-			$fec = $f_alta;
-            $vet = NULL;
-            $pres = 0;
 			$stmt->execute();
 
 			}
@@ -40,7 +31,7 @@
 		$conn = null;	
  }
   
- function comprobarregister($email,$nombre,$apellido,$contraseña){
+ function comprobarregister($email,$nombre,$apellido,$contra){
 	
 	$error = false;
 
@@ -73,14 +64,14 @@
 		$error = true;
 	}
 
-	$testcontraseña = "/^[a-záéíóúüñA-ZÁÉÍÓÚÜÑ0-9?!.,]{6,10}$/";
+	$testcontra = "/^[a-záéíóúüñA-ZÁÉÍÓÚÜÑ0-9?!.,]{6,10}$/";
 
-	if ($contraseña == "") {
-		echo "Tienes que añadir una contraseña de entre 6 a 10 carácteres."."<br>";
+	if ($contra == "") {
+		echo "Tienes que añadir una contra de entre 6 a 10 carácteres."."<br>";
 		$error = true;
 	}else{
-		if (!preg_match_all($testcontraseña,$contraseña)) {
-			echo "La contraseña es errónea, no está bien escrita o no tiene entre 6 a 10 carácteres."."<br>";
+		if (!preg_match_all($testcontra,$contra)) {
+			echo "La contra es errónea, no está bien escrita o no tiene entre 6 a 10 carácteres."."<br>";
 			$error = true;
 		}
 	}					
