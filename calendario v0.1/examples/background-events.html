@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='../dist/index.global.min.js'></script>
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title'
+      },
+      initialDate: '2023-05-08',
+      navLinks: false, // can click day/week names to navigate views
+      businessHours: false, // display business hours
+      editable: false,
+      selectable: true,
+      select: function(start, end) {
+          var url = 'ordenas.html?fecha=' + encodeURIComponent(moment(start).format('YYYY-MM-DD'));
+          window.location.replace(url);
+      },
+
+      //intentos de que se pongan en rojo y no clicables los sábados y domingos.
+      /*viewRender: function(view, element) {
+          // Selección de los días que corresponden a sábados y domingos
+          var saturdays = $('.fc-day-grid .fc-sat');
+          var sundays = $('.fc-day-grid .fc-sun');
+          
+          // Cambio de estilo de los días seleccionados
+          saturdays.addClass('fc-nonclickable fc-sat-sun');
+          sundays.addClass('fc-nonclickable fc-sat-sun');
+          saturdays.css('background-color', 'red');
+          sundays.css('background-color', 'red');
+          saturdays.css('border-color', 'red');
+          sundays.css('border-color', 'red');
+          saturdays.removeClass('fc-day-top fc-day-bottom fc-day-left fc-day-right');
+          sundays.removeClass('fc-day-top fc-day-bottom fc-day-left fc-day-right');
+        },
+      /*dayRender: function(date, cell) {
+          var day = date.day();
+          if (day === 0 || day === 6) {
+            $(cell).addClass('fc-nonclickable fc-sat-sun');
+          }
+        },
+        eventRender: function(event, element) {
+          var day = event.start.day();
+          if (day === 0 || day === 6) {
+            element.css('background-color', 'red');
+            element.css('border-color', 'red');
+            element.removeClass('fc-event-clickable');
+          }
+        },*/
+      events: [
+        {
+          title: 'Partida Especial',
+          start: '2023-05-18T13:00:00',
+          constraint: 'partida especial'
+        },
+        {
+          title: '3',
+          start: '2023-05-09T11:00:00',
+          constraint: '3', // defined below
+          color: '#ff9f89'
+        },
+        {
+          title: 'Torneo',
+          start: '2023-05-18',
+          end: '2023-05-20'
+        },
+
+        // areas where "Meeting" must be dropped
+        {
+          groupId: 'Lol',
+          start: '2023-01-11T10:00:00',
+          end: '2023-01-11T16:00:00',
+          display: 'background'
+        },
+
+        // red areas where no events can be dropped
+        {
+          start: '2023-05-24',
+          end: '2023-05-28',
+          overlap: false,
+          display: 'background',
+          color: '#ff9f89'
+        }
+      ]
+    });
+
+    calendar.render();
+  });
+
+</script>
+<style>
+
+  body {
+    margin: 40px 10px;
+    padding: 0;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+
+  #calendar {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+</style>
+</head>
+<body>
+
+  <div id='calendar'></div>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>Otra página</title>
+</head>
+<body>
+  <h1>Fecha seleccionada: <span id="fecha"></span></h1>
+  <script>
+    var urlParams = new URLSearchParams(window.location.search);
+    var fecha = urlParams.get('fecha');
+    document.getElementById('fecha').textContent = fecha;
+  </script>
+
+  <p>Aqúi la foto de los ordenadores y seleccionarlos</p>
+</body>
+</html>
