@@ -25,6 +25,7 @@
 <body>
 <?php
     require("config/config.php");
+    require("config/config-reserva.php");
     $conn = conexion();
     session_start();
     if(isset( $_SESSION['usuario'])){
