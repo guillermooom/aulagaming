@@ -35,7 +35,7 @@
   <a href="index.php">CERRAR SESION</a>
   <br>
       <ul>
-        <li><a href="">Reservar Ordenador</a></li><br>
+        <li><a href="reserva.php">Reservar Ordenador</a></li><br>
         <li><a href="anulareserva.php">Anular Reserva</a></li><br>
         <li><a href="consultareserva.php">Consultar Reservas</a></li><br>
         <li><a href="">Ver Torneos</a></li><br>
