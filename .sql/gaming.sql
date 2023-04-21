@@ -6,11 +6,11 @@ USE gaming;
 DROP TABLE IF EXISTS usuarios;
 
 create table usuarios (email varchar(50) not null, nombre varchar(20) not null, apellido varchar(20) not null,
- contraseña varchar(20)	, fecha_alta date not null, vetado date, pc_reservados int not null) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+ contra varchar(20)	, fecha_alta date not null, vetado date, pc_reservados int not null) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 alter table usuarios add constraint pk_usuarios primary key (email);
 
-insert into usuarios (email , nombre , apellido , contraseña , fecha_alta , vetado, pc_reservados ) values
+insert into usuarios (email , nombre , apellido , contra , fecha_alta , vetado, pc_reservados ) values
 ('paco@educamadrid.com','Paco','Gonzalez','admin','2023-05-08',NULL,'0'),
 ('manolo@educamadrid.com','Manolo','Lama','admin','2023-05-09',NULL,'0'),
 ('maria@educamadrid.com','María','Gonzalez','admin','2023-05-08',NULL,'0');
