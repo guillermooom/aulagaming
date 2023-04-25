@@ -45,7 +45,7 @@
     $nb=$_SESSION['usuario'];
         $datos=consultaReserva($conn,$nb,$hoy);
         if($datos==null)
-          echo "Todavia no has realizado reserva<br>Si deseas reservar visita <a href='../reservapc.php'>Reservar PC</a>";
+          echo "Todavia no has realizado reserva<br>Si deseas reservar visita <a href='../reserva.php'>Reservar PC</a>";
         else{
           foreach($datos as $dat){
             if($dat["fecha_reserva"]>$hoy){
