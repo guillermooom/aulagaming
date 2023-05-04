@@ -87,7 +87,7 @@ function mesESP($mes){
 					if ($row == 1 && $col < $firstDay) {
 						echo "<td></td>";
 					} else if ($currentDay > $numDays) {
-						echo "<td></td>";
+						$row++;
 					} else {
 						//FESTIVOS
 						if($col>5 || ($monthName=="September" && $currentDay < 8) || ($monthName=="October" && ($currentDay==12 || $currentDay ==31)) ||
