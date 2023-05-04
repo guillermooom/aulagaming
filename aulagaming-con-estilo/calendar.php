@@ -14,9 +14,12 @@
 			text-align: center;
 		}
 		th {
-			background-color: #007bff;
+			background-color: blue;
 			color: #fff;
 			padding: 10px;
+			text-align: center;
+		}
+		h2{
 			text-align: center;
 		}
 		input[type="submit"]{
