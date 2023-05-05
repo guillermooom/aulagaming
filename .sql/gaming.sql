@@ -31,7 +31,8 @@ insert into pc (id, estado) values
 ('6', 'Correcto'),
 ('7', 'Correcto'),
 ('8', 'Correcto'),
-('9', 'Correcto');
+('9', 'Correcto'),
+('10', 'Correcto');
 
 
 DROP TABLE IF EXISTS reservar;
