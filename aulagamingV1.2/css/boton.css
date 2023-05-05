@@ -1,0 +1,32 @@
+  /* estilo para el botón submit */
+  input[type="submit"] {
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    font-family:'gaming';
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px 5px rgba(255,0,0,1);
+    animation: led 30s linear infinite;
+  }
+  
+  /* animación de la luz led */
+  @keyframes led {
+    0% {
+      box-shadow: 0px 0px 15px 5px rgba(0,0,255,1);
+    }
+    50% {
+      box-shadow: 0px 0px 15px 5px rgba(255,0,0,1);
+    }
+    100% {
+      box-shadow: 0px 0px 15px 5px rgba(0,0,255,1);
+    }
+  }
+
+@font-face {
+    font-family:'gaming';
+    src: url("../fonts/BrunoAceSC-Regular.ttf");
+}
