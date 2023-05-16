@@ -1,0 +1,13 @@
+.checkeable input {
+    display: none;
+  }
+  .checkeable img {
+    width: 100px;
+    border: 5px solid transparent;
+  }
+  .checkeable input {
+    display: none;
+  }
+  .checkeable input:checked  + img {
+    content:url("../img/pc-select.png");
+  }
