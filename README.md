@@ -25,5 +25,6 @@ Cosas que faltan:
 - Cambiar calendario para que sea más fácil identificar que ordenador coger. 
 - Administrar usuarios
 - Administrar consultar
-- Añadir admin
+- Añadir admin X
 - Campo incidencia
+- Entonces se puede hacer que haya un admin y el admin meta a los usuarios y solo tengan que loguearse en vez de registrarse sin sentido.
