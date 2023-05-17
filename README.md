@@ -15,9 +15,9 @@ Cosas que faltan:
 - Corredor faltas de ortografía 
 - Se puede agrandar la letra. *X*
 - Hacer que solo ponga un cancelar reserva en consulta reserva. *X*
-- Hacer que los ordenadores no disponibles se vean en rojo 
+- Hacer que los ordenadores no disponibles se vean en rojo X
 - Que el usuario pueda añadir incidencias del ordenador y de las otras. 
-- En reserva que compruebe que el ordenador está bien para poder cogerlo o que esté en rojo desde el principio.
+- En reserva que compruebe que el ordenador está bien para poder cogerlo o que esté en rojo desde el principio. X
 - lo de los avisos 
 - optimizar código sql, y tal.
 - Poner el logo(Seguramente lo ponga más bonito o eso). 
