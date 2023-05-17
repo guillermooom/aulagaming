@@ -1,0 +1,35 @@
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: rgb(1, 1, 78);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+input[type="submit"]{
+    border:none;
+    background-color:black;
+    color:white;
+    width: 100%;
+    font-family:'gaming';
+    }
+
+    @font-face {
+        font-family:'gaming';
+        src: url("fonts/BrunoAceSC-Regular.ttf");
+    }
+input[type="submit"]:hover{
+    cursor:pointer;
+    color: lightgreen;
+    transition: 0.6s;
+}
