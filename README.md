@@ -26,5 +26,11 @@ Cosas que faltan:
 - Administrar usuarios
 - Administrar consultar
 - Añadir admin X
-- Campo incidencia
+- Campo incidencia X
 - Entonces se puede hacer que haya un admin y el admin meta a los usuarios y solo tengan que loguearse en vez de registrarse sin sentido.
+
+v2.2.5
+- los usuarios vetados al ser vetados ya no pueden iniciar sesión, se borran sus reservas futuras X
+- ya puedes consultar incidencias
+- solucionado problema en anular reserva que hacia que no mostraba las reservas antiguas si no habia una resserva hecha para futuro.
+- mejora código.
