@@ -34,3 +34,10 @@ v2.2.5
 - ya puedes consultar incidencias
 - solucionado problema en anular reserva que hacia que no mostraba las reservas antiguas si no habia una resserva hecha para futuro.
 - mejora código.
+
+v2.2.6
+- ya se puede administrar ordenadores
+- cambio en reserva ya que fallaba al tener dos ordenadores mál, se ha cambiado a arrays
+- Creado administrar usuario pero queda añadir, eliminar hay que mirarlo pq a lo mejor solo quita la contraseña y 
+lo que hacemos es que para logearse te tienes que regitrar con una cuenta que no tiene contraseña.
+- Mejoras código
