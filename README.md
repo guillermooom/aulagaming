@@ -9,7 +9,7 @@ Cosas que faltan:
 - Responsables 2 X
 - Mejorar estilo
 - Cambiar submit en login *X* 
-- Mejorar normativa supongo 
+- Mejorar normativa supongo X
 - Cambiar que la normativa se abra en otra ventana o que no se vaya *X*
 - Crear usuario admin o superior X
 - Corredor faltas de ortografía 
@@ -19,7 +19,7 @@ Cosas que faltan:
 - Que el usuario pueda añadir incidencias del ordenador y de las otras. X
 - En reserva que compruebe que el ordenador está bien para poder cogerlo o que esté en rojo desde el principio. X
 - lo de los avisos 
-- optimizar código sql, y tal.
+- optimizar código sql, y tal. X
 - Poner el logo(Seguramente lo ponga más bonito o eso). 
 - Todo lo que requiere ser admin, hay 2 admins el superior que administra y el normal. X
 - Cambiar calendario para que sea más fácil identificar que ordenador coger. 
@@ -49,6 +49,7 @@ v2.2.7
 v2.2.8
 - Estructurado y mejorado el código, solución de una problema con incidencias y reservas.
 - Ya está todo funcional y esta guay
+- Normativa mejorada.
 - Añadido seguirdad en los config
 - Solo faltan 2 cosas y una opcional.
 - Que sea responsive, no lo es, inicio y registro por ejemplo no se ven mal, pero calendario o reservas está horrible
