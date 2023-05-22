@@ -45,3 +45,12 @@ lo que hacemos es que para logearse te tienes que regitrar con una cuenta que no
 v2.2.7
 - Aparentemente todas las funcionalidades hechas y funcionales. Con el SQL v2.3.1
 - Hay que meter todas las alertas.
+
+v2.2.8
+-Estructurado y mejorado el código, solución de una problema con incidencias y reservas.
+-Ya está todo funcional y esta guay
+-Añadido seguirdad en los config
+-Solo faltan 2 cosas y una opcional.
+-Que sea responsive, no lo es, inicio y registro por ejemplo no se ven mal, pero calendario o reservas está horrible
+-Lo segundo son las alertas que quedan que son unas cuantas pero solo es copiar, pegar y comprobar.
+-Lo opcional es ponerle tiempo al usuario vetado que es fácil de hacer con un método pero no lo he hecho porque prefiero que lo haga la profe ya que puede quitarle el veto, y si es muy pesado hasta eliminarle.
